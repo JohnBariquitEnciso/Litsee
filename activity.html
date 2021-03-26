@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<style>
+  #scrollTop{
+    margin-left:1000px;
+    height: 40px;
+  }
+  .buang{
+    margin-left:50px;
+  }
+</style>
+<body>
+<!-- Create an input field that will add an option to a dropdown box -->
+
+<!-- number1 -->
+
+
+
+
+   
+<!-- #number2 -->
+<form action="">
+  <input type="checkbox" name="disabler" id="disabler">
+  <button type="button" class="btn btn-primary" value="Submit" id="submit" disabled>Primary</button>
+</form>
+<br><br>
+
+
+
+<!-- #number3 -->
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+<table style="width:20%; margin-left:40px;">
+  <tr style="background-color:green;">
+    <th class="firstName">Firstname</th>
+    <th class="firstName">Lastname</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+  </tr>
+  <tr style="background-color:green">
+    <td class="firstName">Eve</td>
+    <td class="firstName">Jackson</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+  </tr>
+</table>
+<br>
+<button type="button" class="btn btn-warning" id="changeColor" style="margin-left:100px;">Alternate Color</button>
+<br><br> 
+
+
+
+  <br><br>
+
+<!-- number 4 -->
+  
+<input placeholder="text" id= "inputText"  maxlength="15" style="margin-left:60px;">
+<p> 
+            <span class="GFG" style="margin-left:60px;">15</span>  
+            Characters Remaining 
+        </p>
+  <!-- number 7  -->
+  <p class="displayText" style="margin-left:60px;"></p>
+                                         
+
+
+<br><br><br>
+
+  <!-- #5&6 -->
+
+ 
+<button type="button" class="btn btn-primary" id="addBtn" style="margin-left:60px;">Add</button>
+<select id = "addButton"></select>
+<button type="button" class="btn btn-danger" id="removeBtn">Remove</button>
+<br><br><br>
+<button type="button" class="btn btn-success" id="refreshBtn" value="refresh" style="margin-left:60px;">Refresh</button>
+  <br><br><br>
+
+
+    <!-- #10 -->
+    <label style="margin-left:50px;">Input amount: </label><input type="text" class="numbers" value="" style="margin-left:60px;"></p>
+<br><br>
+
+
+<!-- #11 -->
+<button type="button" class="btn btn-info" id="animate" style="margin-left:50px;width:20%;">Animate</button>
+<br><br>
+<input type="text" class="buang" placeholder="Buang Ka" style="width: 20%;">
+<br><br><br>
+
+
+
+<button type="button" class="btn btn-warning" id="upBtn" style="margin-left:50px">Up</button>
+<button type="button" class="btn btn-warning" id="downBtn" style="margin-left:50px">Down</button>
+
+<br>
+<br>
+<button type="button" class="btn btn-warning" id="leftBtn" style="margin-left:50px">Left</button>
+
+<button type="button" class="btn btn-warning" id="rightBtn" style="margin-left:50px">Right</button>
+<br>
+<br>
+
+<div style="background:#98bf21;height:50px;width:70px;position:absolute;"></div>
+
+
+<br>
+<br>
+<br>
+<button type="button" class="btn btn-primary" id="scrollTop">Scroll To Top</button>
+
+<script>
+// number2
+    $('#disabler').on('click',function() {
+        if ($(this).is(':checked')) {
+          $('#submit').removeAttr('disabled');
+           
+        } else {
+          $('#submit').attr('disabled', 'disabled');
+        }
+    });
+</script>
+
+<script>
+// number3
+    $(document).ready(function(){
+        $("#changeColor").on('click',function(){
+            $(".firstName").css("background-color","orange");
+       
+        });
+// number 1
+$("#scrollTop").on('click',function(){
+  $("html,body").animate({scrollTop:0},"slow");
+  return false;
+})
+$
+// number4
+
+
+var max_length = 15; 
+            $("#inputText").on('keyup',function () { 
+                var len = max_length - $(this).val().length; 
+                $('.GFG').text(len);
+// number7
+                $(".displayText").text($(this).val())
+            }); 
+
+// number5
+
+        $("#addBtn").on('click',function(){
+            // var option = $("<option>")
+            // $("#addButton").append(option)
+            $("#addButton").append("<option>"+$('.displayText').text()+"</option>")
+        })
+// number6
+
+        $("#removeBtn").on('click',function(){
+            $("#addButton option:selected").remove()
+        })
+// number8
+        $("#refreshBtn").on('click',function(){
+  if(this.value == "refresh") {
+    document.getElementById('refreshBtn').innerHTML = "Buang";
+    this.value = "Buang";
+  }else{
+    document.getElementById('refreshBtn').innerHTML = "refresh";
+    this.value = "refresh";
+  }
+})
+
+// number10
+        $('.numbers').on('keyup',function () { 
+    this.value = this.value.replace(/[^0-9\.]/g,'');
+})
+// number11
+$("#animate").on('click',function(){
+    $(".buang").animate({width: '150px',opacity:'0.4',marginLeft: '0.6in',fontSize:'3em',borderWidth: '10px'},5000)
+
+
+})
+// number 12
+$("#leftBtn").on('click',function(){
+    $("div").animate({left: '-=20px'});
+  })
+  $("#rightBtn").on('keyup',function(){
+    $("div").animate({left: '+=20px'});
+  })
+
+$("#upBtn").on('click',function(){
+  $("div").animate({'marginTop': '-=50px'});
+  
+})
+$("#downBtn").on('click',function(){
+  $("div").animate({'marginTop': '+=50px'});
+})
+
+
+
+
+
+      
+    })
+
+</script>
+
+
+</body>
+</html>
